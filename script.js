@@ -17,10 +17,11 @@ hero.appendChild(flagInfo);
 
 const getUserInput = (event) => {
   event.preventDefault();
-  const userInput = searchInput.value;
+  let userInput = searchInput.value;
 
   hero.classList.remove("slideIn");
   countryData(userInput);
+  userInput = "";
 };
 
 inputForm.addEventListener("submit", getUserInput);
